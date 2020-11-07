@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Page1 View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Test20201106" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="Page1ViewController" customModule="Test20201106" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -38,17 +38,19 @@
                     </view>
                     <navigationItem key="navigationItem" id="46h-5Z-MGG"/>
                     <connections>
-                        <segue destination="z1f-aw-T61" kind="show" identifier="page1RequestSuccessfulIdentify" id="gY5-ju-tiO"/>
+                        <outlet property="requestBtn" destination="5RC-mR-RwC" id="phw-FT-33Y"/>
+                        <outlet property="titleLbl" destination="n0A-f9-aWK" id="XTM-yG-ZBl"/>
+                        <segue destination="z1f-aw-T61" kind="show" identifier="" id="yEh-hU-o6c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="88.392857142857139"/>
         </scene>
-        <!--View Controller-->
+        <!--Page2 View Controller-->
         <scene sceneID="qFr-0O-IHK">
             <objects>
-                <viewController id="z1f-aw-T61" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="page2Identify" id="z1f-aw-T61" customClass="Page2ViewController" customModule="Test20201106" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="D4M-53-VGv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -59,7 +61,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hPf-S3-TIQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1764" y="88"/>
+            <point key="canvasLocation" x="1839" y="88"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4Yf-6q-Lso">
