@@ -130,20 +130,25 @@
             </objects>
             <point key="canvasLocation" x="1837.68115942029" y="87.723214285714278"/>
         </scene>
-        <!--View Controller-->
+        <!--Page3 View Controller-->
         <scene sceneID="smM-WX-oWR">
             <objects>
-                <viewController id="dUc-GR-ANh" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="page3Identify" id="dUc-GR-ANh" customClass="Page3ViewController" customModule="Test20201106" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MxF-HL-GXt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vxi-ZH-3HD">
-                                <rect key="frame" x="0.0" y="88" width="414" height="272"/>
-                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="361.5"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="id: 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cZu-MD-mPV">
-                                <rect key="frame" x="0.0" y="380" width="414" height="21"/>
+                                <rect key="frame" x="0.0" y="474.5" width="414" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title: testeesetse" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IU6-r9-AFp">
+                                <rect key="frame" x="0.0" y="515.5" width="414" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -152,16 +157,24 @@
                         <viewLayoutGuide key="safeArea" id="gCl-6H-joi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="cZu-MD-mPV" firstAttribute="top" secondItem="vxi-ZH-3HD" secondAttribute="bottom" constant="20" id="0Ob-BN-6Dg"/>
+                            <constraint firstItem="cZu-MD-mPV" firstAttribute="top" secondItem="vxi-ZH-3HD" secondAttribute="bottom" constant="25" id="0Ob-BN-6Dg"/>
                             <constraint firstItem="gCl-6H-joi" firstAttribute="trailing" secondItem="cZu-MD-mPV" secondAttribute="trailing" id="0cq-MF-fzy"/>
+                            <constraint firstItem="IU6-r9-AFp" firstAttribute="leading" secondItem="gCl-6H-joi" secondAttribute="leading" id="Hek-6P-SaN"/>
+                            <constraint firstItem="IU6-r9-AFp" firstAttribute="top" secondItem="cZu-MD-mPV" secondAttribute="bottom" constant="20" id="Kf0-19-1Ju"/>
                             <constraint firstItem="vxi-ZH-3HD" firstAttribute="top" secondItem="gCl-6H-joi" secondAttribute="top" id="WZM-iO-g4p"/>
                             <constraint firstItem="vxi-ZH-3HD" firstAttribute="leading" secondItem="gCl-6H-joi" secondAttribute="leading" id="g5L-FR-4wd"/>
+                            <constraint firstItem="gCl-6H-joi" firstAttribute="trailing" secondItem="IU6-r9-AFp" secondAttribute="trailing" id="jDx-J5-xNw"/>
                             <constraint firstItem="gCl-6H-joi" firstAttribute="trailing" secondItem="vxi-ZH-3HD" secondAttribute="trailing" id="jgd-e8-fuc"/>
-                            <constraint firstItem="vxi-ZH-3HD" firstAttribute="centerY" secondItem="MxF-HL-GXt" secondAttribute="centerY" multiplier="0.5" id="nsq-Fn-wMu"/>
+                            <constraint firstItem="vxi-ZH-3HD" firstAttribute="centerY" secondItem="MxF-HL-GXt" secondAttribute="centerY" multiplier="0.6" id="nsq-Fn-wMu"/>
                             <constraint firstItem="cZu-MD-mPV" firstAttribute="leading" secondItem="gCl-6H-joi" secondAttribute="leading" id="whX-HS-TyQ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="vGY-Ia-xRp"/>
+                    <connections>
+                        <outlet property="idLbl" destination="cZu-MD-mPV" id="2sq-fJ-idV"/>
+                        <outlet property="image" destination="vxi-ZH-3HD" id="kc5-64-qVZ"/>
+                        <outlet property="titleLbl" destination="IU6-r9-AFp" id="0pi-LE-VBp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yol-me-V5e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

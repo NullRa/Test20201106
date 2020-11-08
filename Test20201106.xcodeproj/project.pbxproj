@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		695D221F2557E3A000E830F0 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695D221E2557E3A000E830F0 /* UIImage.swift */; };
+		695D223B2558445100E830F0 /* Page3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695D223A2558445100E830F0 /* Page3ViewController.swift */; };
 		699040B525555BEA00710924 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699040B425555BEA00710924 /* AppDelegate.swift */; };
 		699040B725555BEA00710924 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699040B625555BEA00710924 /* SceneDelegate.swift */; };
 		699040B925555BEA00710924 /* Page1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699040B825555BEA00710924 /* Page1ViewController.swift */; };
@@ -42,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		695D221E2557E3A000E830F0 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		695D223A2558445100E830F0 /* Page3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page3ViewController.swift; sourceTree = "<group>"; };
 		699040B125555BEA00710924 /* Test20201106.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test20201106.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		699040B425555BEA00710924 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		699040B625555BEA00710924 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +106,14 @@
 			path = Storyboard;
 			sourceTree = "<group>";
 		};
+		695D2239255842F700E830F0 /* Page3 */ = {
+			isa = PBXGroup;
+			children = (
+				695D223A2558445100E830F0 /* Page3ViewController.swift */,
+			);
+			path = Page3;
+			sourceTree = "<group>";
+		};
 		699040A825555BEA00710924 = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +139,7 @@
 			children = (
 				695D22322557EC9E00E830F0 /* Storyboard */,
 				69E7778F25568D300004A528 /* ViewController */,
+				695D2239255842F700E830F0 /* Page3 */,
 				69E7778E25568D160004A528 /* Network */,
 				695D221D2557E38600E830F0 /* Extension */,
 				699040B425555BEA00710924 /* AppDelegate.swift */,
@@ -327,6 +338,7 @@
 				69E7779125568D530004A528 /* BaseApi.swift in Sources */,
 				6990E3B62557C9AE007248E9 /* MyCollectionViewCell.swift in Sources */,
 				69E777852556676C0004A528 /* Page2ViewController.swift in Sources */,
+				695D223B2558445100E830F0 /* Page3ViewController.swift in Sources */,
 				699040B925555BEA00710924 /* Page1ViewController.swift in Sources */,
 				69E7778A2556677A0004A528 /* Page2ViewModel.swift in Sources */,
 				695D221F2557E3A000E830F0 /* UIImage.swift in Sources */,

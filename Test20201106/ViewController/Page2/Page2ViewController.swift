@@ -62,9 +62,21 @@ extension Page2ViewController: UICollectionViewDelegate, UICollectionViewDataSou
         //            return CGSize(width: 160, height: 160)
         //        }
         let size = self.view.frame.width/4 - 8
-        print(size)
-        print(self.view.frame.width)
         return CGSize(width: size, height: size)
     }
 
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let page3VC = storyboard?.instantiateViewController(withIdentifier: "page3Identify") as? Page3ViewController {
+            navigationController?.pushViewController(page3VC, animated: true)
+//            page2VC.page2ViewModel = Page2ViewModel(apiDatas: apiData)
+            let index = indexPath.row
+            page3VC.idLblText = String(page2ViewModel.getDataID(index: index))
+            page3VC.titleLblText = page2ViewModel.getDataTitle(index: index)
+
+            let imgURL = page2ViewModel.getDataUrl(index: index)
+//            let size = self.view.frame.width/4 - 8
+//            cell.image.image = urlToimage(url: imgURL)!.reSizeImage(reSize: CGSize(width: size, height: size))
+            page3VC.imageData = urlToimage(url: imgURL)
+        }
+    }
 }

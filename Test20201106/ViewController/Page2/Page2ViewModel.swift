@@ -24,8 +24,12 @@ class Page2ViewModel {
     func getDataTitle(index:Int) -> String {
         return apiDatas[index].title
     }
-//    https://via.placeholder.com/150/92c952
+
     func getDataThumbnailUrl(index:Int) -> URL {
         return apiDatas[index].thumbnailUrl
+    }
+
+    func getDataUrl(index:Int) -> URL {
+        return apiDatas[index].url
     }
 }
