@@ -12,4 +12,20 @@ class Page2ViewModel {
     init(apiDatas:[ApiData]){
         self.apiDatas = apiDatas
     }
+
+    func getDatasCount() -> Int {
+        return apiDatas.count
+    }
+
+    func getDataID(index:Int) -> Int {
+        return apiDatas[index].id
+    }
+
+    func getDataTitle(index:Int) -> String {
+        return apiDatas[index].title
+    }
+//    https://via.placeholder.com/150/92c952
+    func getDataThumbnailUrl(index:Int) -> URL {
+        return apiDatas[index].thumbnailUrl
+    }
 }

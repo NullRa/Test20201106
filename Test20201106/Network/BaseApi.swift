@@ -16,6 +16,8 @@ struct ApiData: Codable {
 }
 
 class BaseApi {
+    static let shared = BaseApi()
+
     let baseApi = "https://jsonplaceholder.typicode.com"
     let endPoint = "/photos"
 

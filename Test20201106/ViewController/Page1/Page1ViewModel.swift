@@ -11,7 +11,7 @@
 import Foundation
 
 class Page1ViewModel {
-    let baseApi = BaseApi()
+    let baseApi = BaseApi.shared
 
     func requestData() throws -> [ApiData] {
         return try baseApi.fetchApiData()

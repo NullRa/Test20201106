@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		695D221F2557E3A000E830F0 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695D221E2557E3A000E830F0 /* UIImage.swift */; };
 		699040B525555BEA00710924 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699040B425555BEA00710924 /* AppDelegate.swift */; };
 		699040B725555BEA00710924 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699040B625555BEA00710924 /* SceneDelegate.swift */; };
 		699040B925555BEA00710924 /* Page1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699040B825555BEA00710924 /* Page1ViewController.swift */; };
@@ -15,6 +16,7 @@
 		699040C125555BED00710924 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 699040BF25555BED00710924 /* LaunchScreen.storyboard */; };
 		699040CC25555BED00710924 /* Test20201106Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699040CB25555BED00710924 /* Test20201106Tests.swift */; };
 		699040D725555BED00710924 /* Test20201106UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699040D625555BED00710924 /* Test20201106UITests.swift */; };
+		6990E3B62557C9AE007248E9 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6990E3B52557C9AE007248E9 /* MyCollectionViewCell.swift */; };
 		69E7777F25565CBC0004A528 /* Page1ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E7777E25565CBC0004A528 /* Page1ViewModel.swift */; };
 		69E777852556676C0004A528 /* Page2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E777842556676C0004A528 /* Page2ViewController.swift */; };
 		69E7778A2556677A0004A528 /* Page2ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E777892556677A0004A528 /* Page2ViewModel.swift */; };
@@ -39,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		695D221E2557E3A000E830F0 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		699040B125555BEA00710924 /* Test20201106.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test20201106.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		699040B425555BEA00710924 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		699040B625555BEA00710924 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +56,7 @@
 		699040D225555BED00710924 /* Test20201106UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Test20201106UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		699040D625555BED00710924 /* Test20201106UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test20201106UITests.swift; sourceTree = "<group>"; };
 		699040D825555BED00710924 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6990E3B52557C9AE007248E9 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 		69E7777E25565CBC0004A528 /* Page1ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page1ViewModel.swift; sourceTree = "<group>"; };
 		69E777842556676C0004A528 /* Page2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page2ViewController.swift; sourceTree = "<group>"; };
 		69E777892556677A0004A528 /* Page2ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page2ViewModel.swift; sourceTree = "<group>"; };
@@ -84,6 +88,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		695D221D2557E38600E830F0 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				695D221E2557E3A000E830F0 /* UIImage.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		695D22322557EC9E00E830F0 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				699040BA25555BEA00710924 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
 		699040A825555BEA00710924 = {
 			isa = PBXGroup;
 			children = (
@@ -107,11 +127,12 @@
 		699040B325555BEA00710924 /* Test20201106 */ = {
 			isa = PBXGroup;
 			children = (
+				695D22322557EC9E00E830F0 /* Storyboard */,
 				69E7778F25568D300004A528 /* ViewController */,
 				69E7778E25568D160004A528 /* Network */,
+				695D221D2557E38600E830F0 /* Extension */,
 				699040B425555BEA00710924 /* AppDelegate.swift */,
 				699040B625555BEA00710924 /* SceneDelegate.swift */,
-				699040BA25555BEA00710924 /* Main.storyboard */,
 				699040BD25555BED00710924 /* Assets.xcassets */,
 				699040BF25555BED00710924 /* LaunchScreen.storyboard */,
 				699040C225555BED00710924 /* Info.plist */,
@@ -151,6 +172,7 @@
 			children = (
 				69E777842556676C0004A528 /* Page2ViewController.swift */,
 				69E777892556677A0004A528 /* Page2ViewModel.swift */,
+				6990E3B52557C9AE007248E9 /* MyCollectionViewCell.swift */,
 			);
 			path = Page2;
 			sourceTree = "<group>";
@@ -303,9 +325,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				69E7779125568D530004A528 /* BaseApi.swift in Sources */,
+				6990E3B62557C9AE007248E9 /* MyCollectionViewCell.swift in Sources */,
 				69E777852556676C0004A528 /* Page2ViewController.swift in Sources */,
 				699040B925555BEA00710924 /* Page1ViewController.swift in Sources */,
 				69E7778A2556677A0004A528 /* Page2ViewModel.swift in Sources */,
+				695D221F2557E3A000E830F0 /* UIImage.swift in Sources */,
 				69E7777F25565CBC0004A528 /* Page1ViewModel.swift in Sources */,
 				699040B525555BEA00710924 /* AppDelegate.swift in Sources */,
 				699040B725555BEA00710924 /* SceneDelegate.swift in Sources */,

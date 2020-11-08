@@ -10,22 +10,61 @@ import UIKit
 class Page2ViewController: UIViewController {
 
     var page2ViewModel: Page2ViewModel!
+    @IBOutlet weak var collectionView: UICollectionView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        initUI()
+        bind()
     }
-    
 
-    /*
-    // MARK: - Navigation
+    func initUI(){
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
-    */
+
+    func bind(){
+        collectionView.delegate = self
+        collectionView.dataSource = self
+    }
+
+    private func urlToimage(url: URL) -> UIImage? {
+        let imageData = try? Data(contentsOf: url)
+        if imageData == nil {
+            return nil
+        }
+        let image = UIImage(data: imageData!)
+        return image
+    }
+
+}
+
+extension Page2ViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return page2ViewModel.getDatasCount()
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! MyCollectionViewCell
+        let index = indexPath.row
+        cell.idLbl.text = String( page2ViewModel.getDataID(index: index))
+        cell.titleLbl.text = page2ViewModel.getDataTitle(index: index)
+        let imgURL = page2ViewModel.getDataThumbnailUrl(index: index)
+        let size = self.view.frame.width/4 - 8
+        cell.image.image = urlToimage(url: imgURL)!.reSizeImage(reSize: CGSize(width: size, height: size))
+        
+        return cell
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize{
+
+        //        if traitCollection.horizontalSizeClass == .compact && traitCollection.verticalSizeClass == .regular{
+        //            //iphone直向
+        //            return CGSize(width: 160, height: 160)
+        //        }
+        let size = self.view.frame.width/4 - 8
+        print(size)
+        print(self.view.frame.width)
+        return CGSize(width: size, height: size)
+    }
 
 }
