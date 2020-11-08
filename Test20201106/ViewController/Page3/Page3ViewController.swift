@@ -13,17 +13,24 @@ class Page3ViewController: UIViewController {
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var image: UIImageView!
 
-    var idLblText: String!
-    var titleLblText: String!
-    var imageData: UIImage!
+    var page3ViewModel: Page3ViewModel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-        idLbl.text = "ID: " + idLblText
-        titleLbl.text = "Title: " + titleLblText
+        idLbl.text = "ID: " + page3ViewModel.idLblText
+        titleLbl.text = "Title: " + page3ViewModel.titleLblText
+        let imageData = urlToimage(url: page3ViewModel.imageURL)
         image.image = imageData
+    }
+
+    private func urlToimage(url: URL) -> UIImage? {
+        let imageData = try? Data(contentsOf: url)
+        if imageData == nil {
+            return nil
+        }
+        let image = UIImage(data: imageData!)
+        return image
     }
     
 
