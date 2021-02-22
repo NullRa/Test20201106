@@ -50,7 +50,10 @@ extension Page2ViewController: UICollectionViewDelegate, UICollectionViewDataSou
         cell.titleLbl.text = page2ViewModel.getDataTitle(index: index)
         let imgURL = page2ViewModel.getDataThumbnailUrl(index: index)
         let size = self.view.frame.width/4 - 8
-        cell.image.image = urlToimage(url: imgURL)!.reSizeImage(reSize: CGSize(width: size, height: size))
+        guard let img = urlToimage(url: imgURL)?.reSizeImage(reSize: CGSize(width: size, height: size)) else {
+            return cell
+        }
+        cell.image.image = img
         
         return cell
     }
